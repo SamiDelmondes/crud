@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="">
+
+    </div>
+    <div class="row">
+        
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="bloc2">
+                <div class="brand-title">Menu</div>
+
+                <a href="cadMedico.html"><button>cadatrar Paciente</button></a>
+
+               
+
+                <button class="botao" onclick="imprimir()"> imprimir atestado </button>
+
+                <a href="gerenciamento.html"><button > Gerenciamento </button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function imprimir(){
+            var cpfg = prompt("Please enter you cpf: ");
+
+            if (cpfg != null && cpfg.length == 11 && !isNaN(cpfg)) {
+            // If a valid CPF was entered, print the attestation
+                var printWindow = window.open('print.html?cpf=' + cpfg, '_blank');
+                printWindow.focus();
+            } else {
+            // If an invalid CPF was entered, show an error message
+                alert("Invalid CPF. Please enter a valid 11-digit number.");
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+</body>
+</html>

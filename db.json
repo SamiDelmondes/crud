@@ -1,0 +1,21 @@
+{
+  "medico": [
+    {
+      "nome": "Admin",
+      "senha": "01234",
+      "cpf": "000.000.000-00",
+      "id": 1
+    },
+    {
+      "medicoR": "Rebeca",
+      "especialidade": "Pediatra ",
+      "nomepaciente": "Luiz",
+      "idade": "08",
+      "sexo": "M",
+      "cpf": "78945612303",
+      "data": "2023-04-13",
+      "diagnostico": "Varicela",
+      "id": 7
+    }
+  ]
+}
