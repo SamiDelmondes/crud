@@ -113,7 +113,7 @@
         //GET
         function buscarDados(){
             const cpf = document.getElementById('cpf').value;
-            fetch('http://localhost:3000/medico', {
+            fetch('medico', {
                 method: 'GET',
             })
             .then(response => response.json())
@@ -148,7 +148,7 @@
             const data = document.getElementById("data").value;
             const diagnostico = document.getElementById("diagnostico").value;
 
-            fetch(`http://localhost:3000/medico/${id}`,{
+            fetch(`medico/${id}`,{
                 method: 'PUT',
                 headers: {
                     'content-Type': 'application/json'
@@ -173,12 +173,12 @@
         function deletarDados(){
             const cpf = document.getElementById('cpf').value;
 
-            fetch('http://localhost:3000/medico')
+            fetch('medico')
             .then (response => response.json())
             .then (data =>{
                 data.forEach(objeto =>{
                     if(objeto.cpf === cpf){
-                        fetch(`http://localhost:3000/medico/${objeto.id}`,{
+                        fetch(`medico/${objeto.id}`,{
                             method: 'DELETE'
                         })
                     }
