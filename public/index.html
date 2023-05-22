@@ -34,7 +34,7 @@
             const nome = document.getElementById('nome').value;
             const senha = document.getElementById('senha').value;
         
-            fetch('http://localhost:3000/medico')
+            fetch('medico')
             .then(response => response.json()) 
             .then(data => {
                 const pessoa = data.find(p => p.nome === nome && p.senha === senha);
