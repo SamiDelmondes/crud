@@ -55,7 +55,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search)
         const cpf = urlParams.get('cpf');
-        fetch('http://localhost:3000/medico', {
+        fetch('medico', {
             method: 'GET',    
         })
         .then(response => response.json())
@@ -86,7 +86,7 @@
 
         // function buscarDados(){
             // const cpf = document.getElementById('cpf').value;
-            // fetch('http://localhost:3000/medico', {
+            // fetch('medico', {
             //     method: 'GET',
             // })
             // .then(response => response.json())
